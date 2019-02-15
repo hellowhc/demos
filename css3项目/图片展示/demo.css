@@ -1,0 +1,171 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background: #333;
+}
+.wrapper{
+    width:100%;
+    height:100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.wrapper ul{
+    display: flex;
+    width:80%;
+    height:80%;
+    border:1px solid #fff;
+    justify-content: space-between;
+    align-items: center; 
+}
+.wrapper ul .item{
+    width:16%;
+    height:100%;
+    border-radius: 25px;
+    opacity: 0.5;
+    background: #666;
+    font-size: 20px;
+    transition: width 0.5s linear 0.5s, height 0.5s linear;
+}
+.wrapper ul li .inner{
+    position: relative;
+    width:100%;
+    height: 100%;
+    transition: transform 0.5s linear ;
+    align-items: center;
+}
+.wrapper ul li:nth-of-type(1) .showBg{
+    background: url('img/1.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li:nth-of-type(2) .showBg{
+    background: url('img/2.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li:nth-of-type(3) .showBg{
+    background: url('img/3.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li:nth-of-type(4) .showBg{
+    background: url('img/4.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li:nth-of-type(5) .showBg{
+    background: url('img/5.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li:nth-of-type(6) .showBg{
+    background: url('img/6.jpg') no-repeat;
+    width:100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper ul li .inner .close{
+    font-size: 30px;
+    position: absolute;
+    right:50px;
+    top:5px;
+    display:none;
+}
+.wrapper ul li .inner .title{
+    color:#fff;
+    font-size: 20px;
+    position: absolute;
+    left:50px;
+    top:5px;
+    display: none;
+}
+/* inner下面的文字部分的处理 */
+.wrapper li .inner .tit{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+/* li:hover变化 */
+.wrapper ul li:hover{
+    opacity: 1;
+    transition: opacity 0.2s linear;
+    font-size: 30px;
+}
+/* 动作变化 */
+.init li .inner{
+    transform: translateY(100%);
+}
+
+.wrapper ul li:nth-of-type(1) .inner{
+   transition-delay: 0.1s;
+}
+.wrapper ul li:nth-of-type(2) .inner{
+    transition-delay: 0.2s;
+}
+.wrapper ul li:nth-of-type(3) .inner{
+    transition-delay: 0.3s;
+}
+.wrapper ul li:nth-of-type(4) .inner{
+    transition-delay: 0.4s;
+}
+.wrapper ul li:nth-of-type(5) .inner{
+    transition-delay: 0.5s;
+}
+.wrapper ul li:nth-of-type(6) .inner{
+    transition-delay: 0.6s;
+}
+.wrapper-active .active{
+    width:100%;
+}
+.wrapper-active ul li.active{
+    width: 100%;
+}
+.wrapper-active ul li:not(.active){
+    width:0;
+    height: 0;
+}
+.wrapper-active ul .item{
+    opacity: 1;
+    transition: height 0.5s linear,width 0.5s linear 0.5s;
+}
+.wrapper-active ul li .inner .tit{
+    display: none;
+}
+.wrapper-active ul .active .inner .close{
+    display: block;
+    cursor: pointer;
+    color: white;
+}
+.wrapper-active ul .active .inner .title{
+    display: block;
+    cursor: pointer;
+}
+.wrapper-active ul .active .inner .close:hover{
+    font-size: 40px;
+    color: #ccc;
+}

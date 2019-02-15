@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+            text-decoration: none;
+        }
+        input{
+            width:400px;
+            height:40px;
+        }
+        ul{
+            width:400px;
+            display: none;
+            padding-bottom:10px;
+            font-size: 16px;
+        }
+    </style>
+        <input type="text">
+        <ul></ul>
+    <script>
+        var inp=document.getElementsByTagName('input')[0];
+        var ul=document.getElementsByTagName('ul')[0];
+        
+        inp.oninput=function(){
+            var val=this.value;
+            var script=document.createElement('script');
+            script.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+val+'&json=1&p=3&sid=&req=2&csor=1&cb=addDom';
+            document.body.appendChild(script);
+        }
+        function addDom(data){
+            console.log(data);
+            var str='';
+            if(data.s.length>0){
+                data.s.forEach(function(ele,index){
+                str+='<li> <a href="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+ele+'">'+ele+'</a></li>';
+            })
+                ul.innerHTML=str;
+                ul.style.display='block';
+                    document.body.removeChild(document.getElementsByTagName('script')[0]);
+            }else{
+                ul.style.display='none';
+                    document.body.removeChild(document.getElementsByTagName('script')[0]);
+            }
+        }
+     
+
+    </script>
+</body>
+</html>

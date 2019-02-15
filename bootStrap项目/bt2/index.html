@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jQuery/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Title</title>
+    <style>
+        .bdRed{
+            background:red;
+        }
+        .nav-ul-right{
+            min-width:250px;
+        }
+        #slider-left{
+            margin-top:51px;
+        }
+        .li-top{
+            margin:5px;
+        }
+        @media (min-width:768px) {
+            #slider-left{
+                width:235px;
+                height:600px;
+                position:absolute;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#slider-left">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">网站后台管理</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right nav-ul-right">
+            <li class="col-xs-6"><a href="#"><span class="badge bdRed">23</span></a></li>
+            <li class="col-xs-6"><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;注销</a></li>
+        </ul>
+        <!-----------------------------------侧边栏--------------------------------------->
+        <div class="navbar-default collapse navbar-collapse" id="slider-left">
+            <ul class="nav">
+                <li class="li-top">
+                    <!--搜索-->
+                    <div class="input-group">
+                        <input class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <a href="#sub1" data-toggle="collapse">系统功能
+                        <span class="glyphicon glyphicon-menu-right pull-right"></span>
+                    </a>
+                    <ul id="sub1" class="nav collapse">
+                        <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>系统信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>管理员信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>日志信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sub2" data-toggle="collapse">栏目功能
+                        <span class="glyphicon glyphicon-menu-right pull-right"></span>
+                    </a>
+                    <ul id="sub2" class="nav collapse">
+                        <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>系统信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>管理员信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>日志信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sub3" data-toggle="collapse">产品功能
+                        <span class="glyphicon glyphicon-menu-right pull-right"></span>
+                    </a>
+                    <ul id="sub3" class="nav collapse">
+                        <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>系统信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>管理员信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>日志信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sub4" data-toggle="collapse">新闻功能
+                        <span class="glyphicon glyphicon-menu-right pull-right"></span>
+                    </a>
+                    <ul id="sub4" class="nav collapse">
+                        <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span>系统信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>管理员信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>日志信息</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
