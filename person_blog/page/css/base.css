@@ -1,0 +1,390 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    position: relative;
+    /*text-align: center;*/
+    background: url(../image/bg.jpg) #f0f0f0;
+}
+/*头部标题的部分*/
+.header{
+    width: 100%;
+    height: 50px;
+    background: #191818;
+}
+.container{
+    position: relative;
+    width: 1170px;
+    height: 50px;
+    margin: 0px auto;
+    display: flex;
+}
+.container .name{
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+}
+.container .name>a{
+    font-size: 18px;
+    line-height: 50px;
+    font-weight:bold;
+    color: #fff;
+}
+/*个人博客hover发生的时刻*/
+.container .name>a:hover{
+
+}
+.container .nav-tit{
+    width: 500px;
+    height: 100%;
+}
+.container .nav-tit ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.container .nav-tit ul li{
+    width: 50px;
+    height: 100%;
+    text-align: center;
+}
+.container .nav-tit ul li:nth-of-type(1){
+    background: #080808;
+    color:#fff;
+}
+.container .nav-tit ul li:nth-of-type(1) a{
+    color: #fff;
+}
+.container .nav-tit ul li a{
+    line-height: 50px;
+    font-size:15px;
+    color: #eee;
+}
+/*标题hover的时候*/
+.container .nav-tit ul li:hover{
+    color: #ccc;
+}
+/*标题右侧部分的css*/
+.container .serch {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.container .serch input{
+    width: 250px;
+    height: 34px;
+    /*padding: 6px 12px;*/
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-indent: 9px;
+}
+.container .serch button{
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 7px;
+
+}
+
+/*中间内容的部分*/
+.content{
+    position: relative;
+    width: 1170px;
+    margin: 30px auto;
+    display: flex;
+}
+/*中间内容的左边部分*/
+.content .content-left{
+    flex: 9;
+}
+.content .content-left .every-day{
+    width: 90%;
+    height: 80px;
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+}
+.content .content-left .every-day p:nth-of-type(1){
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.content .content-left .every-day p:nth-of-type(2){
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.content .content-left .every-day p:nth-of-type(3){
+    margin-top: 6px;
+    font-size: 14px;
+}
+.content .content-left .every-day p:nth-of-type(3) span:nth-of-type(2){
+    float: right;
+}
+.content .content-left .ariticle .article-item{
+    width: 90%;
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 20px 19px 0px 19px;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+    position: relative;
+    margin-bottom: 20px;
+}
+.content .content-left .ariticle .article-item h2{
+    font-size:20px;
+    font-weight: normal;
+    color: #000;
+}
+.content .content-left .ariticle .article-item h2 a{
+    color: #13102b;
+}
+.content .content-left .ariticle .article-item h2 a:hover{
+    color: #337ab7;
+}
+.content .content-left .ariticle .article-item div.article-content{
+    margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 50px;
+    height: 160px;
+    overflow:hidden;
+    word-break:keep-all;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+.content .content-left .ariticle .article-item .article-time{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 20px;
+    bottom: 0px;
+    color: #eee;
+    border-top: #bfbfbf;
+    background-color: #1f1f1f;
+    padding: 5px 15px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size:14px;
+}
+.content .content-left .ariticle .article-item .article-time a{
+    color: #eee;
+}
+/*中间内容的右边部分*/
+.content .content-right{
+    flex: 4;
+}
+/*右边的随即标签云  */
+.content .content-right .around-con{
+
+    margin-bottom: 20px;
+    width: 100%;
+    height: 350px;
+}
+.content .content-right .around-con .around-title{
+    width: 100%;
+    height: 40px;
+    border-bottom: #191818;
+    background: #191818;
+}
+.content .content-right .around-con .around-title h3{
+    color: #fff;
+    font-weight: normal;
+    padding: 3px 0px 3px 15px ;
+    font-size: 14px;
+    line-height: 30px;
+}
+.content .content-right .around-con a{
+    padding: 2px 3px;
+    overflow: hidden;
+}
+.content .content-right .around-con .panel-body{
+    padding: 15px;
+    background: #222;
+}
+/*右边的最新热门文章*/
+.content .content-right .latest-hot{
+    width: 100%;
+    height: 461px;
+    margin-bottom: 20px;
+    background: #1f1f1f;
+    border: 1px solid transparent;
+    border-radius:4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+.content .content-right .latest-hot .hot-tit{
+    height: 30px;
+    padding: 3px 15px;
+}
+.content .content-right .latest-hot .hot-tit h3{
+    line-height: 30px;
+    font-size:15px;
+    color: #fff;
+    font-weight: normal;
+}
+.content .content-right .latest-hot .hot-article-list{
+    margin-top: 10px;
+}
+.content .content-right .latest-hot .hot-article-list ul li{
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #1f1f1f;
+    border: 1px solid #292929;
+}
+.content .content-right .latest-hot .hot-article-list ul li a{
+    color: #fff;
+}
+.content .content-right .latest-hot .hot-article-list ul li a:hover{
+    color: #337ab7;
+}
+.content .content-right .latest-hot .hot-article-list ul li:hover{
+    color: #337ab7;
+}
+
+/*右边的最新评论*/
+.content .content-right .latest-comments {
+    width: 100%;
+    height: 370px;
+    margin-bottom: 20px;
+    background: #1f1f1f;
+    border: 1px solid transparent;
+    border-radius:4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.content .content-right .latest-comments .comments-tit{
+    height: 30px;
+    padding: 3px 15px;
+}
+.content .content-right .latest-comments .comments-tit h3{
+    line-height: 30px;
+    font-size:15px;
+    color: #fff;
+    font-weight: normal;
+}
+.content .content-right .latest-comments .comments-list{
+    margin-top: 10px;
+}
+.content .content-right .latest-comments .comments-list ul li{
+    padding: 6px 15px;
+    margin-bottom: -1px;
+    background-color: #1f1f1f;
+    border: 1px solid #292929;
+}
+.content .content-right .latest-comments .comments-list ul li p{
+    height: 50%;
+    color: #fff;
+}
+.content .content-right .latest-comments .comments-list ul li p:nth-of-type(1) span:nth-of-type(2){
+    float: right;
+    font-weight: 700;
+}
+.content .content-right .latest-comments .comments-list ul li p:nth-of-type(2) a{
+    color: #777;
+    font-size:12px;
+}
+.content .content-right .latest-comments .comments-list ul li p:nth-of-type(2) a:hover{
+    color: #337ab7;
+}
+
+/*右边下面的友情链接*/
+
+.content .content-right .blogroll{
+    width: 100%;
+    height: 560px;
+    margin-bottom: 20px;
+    background: #1f1f1f;
+    border: 1px solid transparent;
+    border-radius:4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+
+}
+.content .content-right .blogroll .blogroll-tit{
+    height: 30px;
+    padding: 3px 15px;
+}
+.content .content-right .blogroll .blogroll-tit h3{
+    line-height: 30px;
+    font-size:15px;
+    color: #fff;
+    font-weight: normal;
+}
+.content .content-right .blogroll .blogroll-list{
+    margin-top: 10px;
+}
+.content .content-right .blogroll .blogroll-list ul li {
+    padding: 6px 10px;
+    margin-bottom: -1px;
+    background-color: #1f1f1f;
+    border: 1px solid #292929;
+    display: flex;
+    align-items: center;
+}
+.content .content-right .blogroll .blogroll-list ul li a{
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    flex: 1;
+    font-size: 14px;
+}
+.content .content-right .blogroll .blogroll-list ul li a:hover{
+    color: #337ab7;
+}
+
+/*底部*/
+footer{
+    width: 100%;
+    height: 80px;
+    background: #191818;
+    text-align: center;
+}
+footer h3{
+    line-height: 80px;
+    color: #fff;
+}
+
+.page_tool{
+    margin-top: 20px;
+    display: inline-block;
+}
+.page_tool>ul>li{
+    display: inline-block;
+    list-style: none;
+    width: 40px;
+    height: 30px;
+    background: white;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    float: left;
+    cursor: pointer;
+}
+.page_tool>ul>li:hover{
+    background: #ccc;
+}
+
+.now_page{
+    background: burlywood !important;
+    color: white;
+}

@@ -1,0 +1,213 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+.content{
+    position: relative;
+    width: 1170px;
+    margin: 30px auto;
+    display: flex;
+}
+/*中间内容的左边部分*/
+.content .content-left{
+    flex: 9;
+}
+.abstract{
+    width: 90%;
+    /*height: 400px;*/
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 30px 19px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+}
+.abstract .about_me {
+    width:100%;
+}
+.abstract .about_me dl dt{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.abstract .about_me dl dd{
+    color: #333;
+    line-height: 1.42857143;
+    font-size: 16px;
+
+}
+.abstract .about_me dl dd:nth-of-type(2){
+    margin-top: 15px;
+    font-size:14px;
+}
+.abstract .about_me dl dd:nth-of-type(2) a{
+    color: #337ab7;
+}
+.abstract .about_me dl dd:nth-of-type(2) a:hover{
+    color: #333;
+}
+.abstract .about_me dl dd.my_active{
+    margin-top: 15px;
+}
+.abstract .about_me dl dd.my_active p{
+    font-size: 14px;
+}
+.abstract .about_me dl dd.my_active p a{
+     color: #337ab7;
+     font-size: 13px;
+ }
+.abstract .about_me dl dd.my_active p a:hover{
+    color: #333
+}
+.abstract .about_blog {
+    width:100%;
+    margin-top: 50px;
+}
+.abstract .about_blog dl dt{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.abstract .about_blog dl dd{
+    color: #333;
+    line-height: 1.42857143;
+    font-size: 16px;
+
+}
+.abstract .about_blog dl dd:nth-of-type(2){
+    margin-top: 15px;
+    font-size:14px;
+}
+.abstract .about_blog dl dd:nth-of-type(2) a{
+    color: #337ab7;
+}
+.abstract .about_blog dl dd:nth-of-type(2) a:hover{
+    color: #333;
+}
+.abstract .about_blog dl dd.my_active{
+    margin-top: 15px;
+}
+.abstract .about_blog dl dd.my_active p{
+    font-size: 14px;
+}
+.abstract .about_blog dl dd.my_active p a{
+    color: #337ab7;
+    font-size: 13px;
+}
+.abstract .about_blog dl dd.my_active p a:hover{
+    color: #333
+}
+
+/*评论部份*/
+.translate{
+    width: 90%;
+    /*height: 400px;*/
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 15px 19px;
+    background-color: #d9edf7;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+
+}
+.translate h3{
+    font-size: 16px;
+    margin-right: 6px;
+}
+.translate .translate-item{
+    /*width: 88%;*/
+    /*width: 50%;*/
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 15px 10px 15px 18px;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+    margin-top: 20px;
+
+}
+.translate .translate-item .translate-item-people{
+    color: #777ab7;
+    border: 1px dashed #337ab7;
+    padding: 6px 8px;
+    margin-bottom: 20px;
+}
+.translate .translate-item .translate-item-people .translate-item-people-Msg{
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+.translate .translate-item .translate-item-people .translate-item-people-Msg span.my_Msg{
+    margin:0px 8px 0px 5px;
+}
+.translate .translate-item .translate-item-people .translate-item-people-Msg span.reply{
+    margin-left: 5px;
+    cursor: pointer;
+    color: #337ab7;
+}
+.translate .translate-item .translate-item-people .translate-item-people-Msg span.reply:hover{
+    color: #333;
+}
+.translate .translate-item .translate-item-people img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.translate .translate-item .translate-item-people p{
+    margin-left: 20px;
+}
+
+/*作者评论*/
+.translate .translate-item .my_reply{
+    width: 90%;
+    color: #777ab7;
+    border: 1px dashed #337ab7;
+    padding: 6px 8px;
+    margin-left: 7.3%;
+    margin-top: 7px;
+}
+.translate .translate-item .my_reply .reply-item-Msg{
+    display: flex;
+    align-items: center;
+    width: 600px;
+}
+.translate .translate-item .my_reply .reply-item-Msg span.my_Msg{
+    margin:0px 8px 0px 5px;
+}
+.translate .translate-item .my_reply .reply-item-Msg span.reply{
+    margin-left: 5px;
+    cursor: pointer;
+    color: #337ab7;
+}
+.translate .translate-item .my_reply .reply-item-Msg span.reply:hover{
+    color: #333;
+}
+.translate .translate-item .my_reply img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.translate .translate-item .my_reply p{
+    margin-left: 20px;
+}
+
+/*评论部分*/
+.comment{
+    width: 88%;
+    /*height: 400px;*/
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 30px 10px 30px 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+}

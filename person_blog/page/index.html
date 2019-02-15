@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/vue.js"></script>
+
+    <script src="js/axios.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="name">
+            <a href="">我的个人博客|技术博客</a>
+        </div>
+        <div class="nav-tit">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="bg_map.html">地图</a></li>
+                <li><a href="bg_about.html">关于</a></li>
+                <li><a href="bg_message.html">留言</a></li>
+            </ul>
+        </div>
+        <div class="serch">
+            <input type="text" placeholder="请输入关键词查找">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="content-left"  >
+        <div class="every-day" id="everyDay">
+            <p >{{ title }}</p>
+            <p>{{ getContent }}</p>
+            <p>
+                <span>
+                    {{ famous }}
+                </span>
+                <span>
+                    {{ works }}
+                </span>
+            </p>
+        </div>
+        <div class="ariticle" id="artiList">
+            <div class="article-item" v-for="item in articleLists">
+                <h2 >
+                    <a :href="item.link" >
+                        {{item.article_title}}
+                    </a>
+                </h2>
+                <div class="article-content">
+                   {{item.article_content}}
+                </div>
+                <div class="article-time">
+                        <span>发布于
+                            <span class="time">{{item.article_time}}
+                            |浏览(
+                               <span>{{item.articleNum}}</span> )
+                                |Tags:
+                                <span class="tags">
+                                    <a href="#">{{item.article_tags}}</a>
+                                </span>
+                            </span>
+                            </span>
+                        </span>
+                </div>
+            </div>
+            <div class="page_tool">
+                <ul>
+                    <li v-for="(pageNum,index) in pageNumList" :key="index"
+                        v-on:click="jumpTo(pageNum.page)"
+                        :class="{now_page:(pageNum.text == page)}"
+                    >{{pageNum.text}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="around-con" id="random_tags">
+            <div class="around-title">
+                <h3>
+                    随机标签云
+                </h3>
+            </div>
+           <div class="around_tags">
+               <a href="" v-for="tag in tags" :style="{color:randomColor(),fontSize:randomSize()}">{{tag.tag}}</a>
+           </div>
+        </div>
+
+        <div class="latest-hot">
+            <div class="hot-tit">
+                <h3>最新热门</h3>
+            </div>
+            <div class="hot-article-list" id="new_hot">
+                <ul>
+                    <li v-for="title in titleList"><a :href="title.link">{{title.title}}</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="latest-comments">
+            <div class="comments-tit">
+                <h3>最新评论</h3>
+            </div>
+            <div class="comments-list" id="new_comments">
+                <ul>
+                    <li v-for="item in titleList">
+                        <p>
+                            <span>{{item.name}}</span>
+                            <span>[
+                                <span class="coments-time">{{item.time}}</span>
+                                ]</span>
+                        </p>
+                        <p>
+                            <a href="#">{{item.coments}}</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="blogroll">
+            <div class="blogroll-tit">
+                <h3>友情链接</h3>
+            </div>
+            <div class="blogroll-list">
+                <ul>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li><li>
+                    <a href="#">友情链接</a>
+                    <a href="#">友情链接</a>
+                </li><li>
+                    <a href="#">友情链接</a>
+                    <a href="#">友情链接</a>
+                </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            #
+        </div>
+    </div>
+</div>
+<footer>
+    <h3>
+        Copyright © 2010-2017 黄成个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号站长统计
+    </h3>
+</footer>
+<script src="js/demo.js"></script>
+
+</body>
+</html>

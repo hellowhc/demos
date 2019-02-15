@@ -1,0 +1,70 @@
+.liuyan{
+    width: 90%;
+    /*height: 80px;*/
+    border: 1px solid #e3e3e3;
+    border-radius:4px;
+    margin-bottom: 20px;
+    padding: 30px 19px;
+
+    background-color: #f7f7f7;
+    box-shadow: 1px 1px 5px rgba(97,97,97,0.48);
+    color: #333;
+}
+
+.liuyan>span{
+    font-size:16px;
+    margin-top: 12px;
+    margin-bottom: 10px
+}
+.liuyan .write_nicheng{
+    margin-bottom: 10px;
+}
+.liuyan .write_nicheng>input:nth-of-type(3){
+    border-radius: 4px;
+    width: 200px;
+    border: 1px solid #cccccc;
+    padding: 5px 3px;
+    margin-right: 20px;
+}
+.liuyan .write_nicheng>input:nth-of-type(4){
+    border-radius: 4px;
+    width: 400px;
+    border: 1px solid #cccccc;
+    padding: 5px 3px;
+}
+.liuyan>textarea{
+    border-radius: 4px;
+    width: 700px;
+    /*height: 100px;*/
+    border: 1px solid #cccccc;
+    text-indent: 6px;
+    vertical-align: text-top;
+    margin-bottom: 10px;
+}
+.liuyan .yanzhengma{
+    margin-bottom: 10px;
+    position: relative;
+}
+.liuyan .yanzhengma>input:nth-of-type(1){
+    border-radius: 4px;
+    width: 200px;
+    border: 1px solid #cccccc;
+    padding: 5px 3px;
+
+}
+.liuyan .yanzhengma span{
+    position: absolute;
+    right: 384px;
+    top: -6px;
+}
+.liuyan button{
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    padding: 5px 18px;
+    cursor: pointer;
+    background: #ffffff;
+}
+.liuyan button:hover{
+    background: #666;
+    color: #fff;
+}

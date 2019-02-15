@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/liuyan.css">
+    <link rel="stylesheet" href="./css/about_me.css">
+    <script src="./js/vue.js"></script>
+
+    <script src="js/axios.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="name">
+            <a href="">我的个人博客|技术博客</a>
+        </div>
+        <div class="nav-tit">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html">地图</a></li>
+                <li><a href="bg_about.html">关于</a></li>
+                <li><a href="bg_message.html">留言</a></li>
+            </ul>
+        </div>
+        <div class="serch">
+            <input type="text" placeholder="请输入关键词查找">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="content-left">
+        <div class="abstract">
+            <div class="about_me">
+                <dl>
+                    <dd>欢迎灌水交流，别看我长时间不发博，博主可一直都在线~</dd>
+                    <dd style="color: #337ab7; font-size: 14px; margin-bottom: 15px;">友链只交换技术类个人博客。</dd>
+                    <dd style="color: red; font-size: 14px;">不要皮，谢谢。</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="translate" id="blog_coments">
+            <h3>关于:
+                <span>目前有 {{total}}   条留言</span></h3>
+            <div class="translate-item">
+                <div class="translate-item-people" v-for="coment in coments">
+                    <div class="translate-item-people-Msg" >
+                        <img src="./image/bg.jpg" alt="">
+                        <span class="my_Msg">{{coment.user_name}}</span>
+                        {{coment.options}}
+                        <span>发表于{{coment.ctime}}</span>
+                        <span class="reply">
+                            {{coment.options}} &nbsp;&nbsp;&nbsp;
+                           <a v-on:click="reply(coment.id,coment.user_name)" style="cursor: pointer">    [回复]</a>
+                        </span>
+                    </div>
+                    <p>{{coment.comments}}</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="liuyan" id="send_coment">
+            <span>留言部分</span>
+            <div class="write_nicheng">
+                <input type="hidden" id="reply" value="-1">
+                <input type="hidden" id="reply_name" value="0">
+                <input type="text" placeholder="昵称" id="coment_name">
+                <input type="text" placeholder="邮箱(评论被回复时你能收到通知)" id="coment_email">
+            </div>
+            <textarea placeholder="无意义内容我可能不会回复你" id="coment_content" tabindex="4" rows="4"></textarea>
+            <div class="yanzhengma">
+                <input type="text" placeholder="请输入验证码" id="coment_code">
+                <span v-html="vCode" v-on:click="changeCode()" style="cursor: pointer"></span>
+            </div>
+            <button v-on:click="sendComent()"> 提交留言</button>
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="around-con" id="random_tags">
+            <div class="around-title">
+                <h3>
+                    随机标签云
+                </h3>
+            </div>
+            <div class="around_tags">
+                <a href="" v-for="tag in tags" :style="{color:randomColor(),fontSize:randomSize()}">{{tag.tag}}</a>
+            </div>
+        </div>
+
+        <div class="latest-hot">
+            <div class="hot-tit">
+                <h3>最新热门</h3>
+            </div>
+            <div class="hot-article-list" id="new_hot">
+                <ul>
+                    <li v-for="title in titleList"><a :href="title.link">{{title.title}}</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="latest-comments">
+            <div class="comments-tit">
+                <h3>最新评论</h3>
+            </div>
+            <div class="comments-list" id="new_comments">
+                <ul>
+                    <li v-for="item in titleList">
+                        <p>
+                            <span>{{item.name}}</span>
+                            <span>[
+                                <span class="coments-time">{{item.time}}</span>
+                                ]</span>
+                        </p>
+                        <p>
+                            <a href="#">{{item.coments}}</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="blogroll">
+            <div class="blogroll-tit">
+                <h3>友情链接</h3>
+            </div>
+            <div class="blogroll-list">
+                <ul>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li><li>
+                    <a href="#">友情链接</a>
+                    <a href="#">友情链接</a>
+                </li><li>
+                    <a href="#">友情链接</a>
+                    <a href="#">友情链接</a>
+                </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+                    <li>
+                        <a href="#">友情链接</a>
+                        <a href="#">友情链接</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            #
+        </div>
+    </div>
+</div>
+<footer>
+    <h3>
+        Copyright © 2010-2017 黄成个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号站长统计
+    </h3>
+</footer>
+<script src="./js/message.js"></script>
+
+</body>
+</html>
